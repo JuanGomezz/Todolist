@@ -1,0 +1,26 @@
+
+<div> 
+<p>TO-DO LIST</p>
+
+<p class="p-3 mb-2 bg-danger text-white" *ngIf="error">{{errorText}}</p>
+<input type="text" [(ngModel)]="texto" class="btn btn-outline-secondary" placeholder="Ingrese una Tarea">
+
+<button (click)="add()" class="btn btn-outline-warning"><i class="fas fa-plus"></i></button><br>
+
+<table class="table">
+
+<td><ul *ngFor="let item of lista; let i=index " class="table table-striped" >
+   <input type="checkbox" id="cbox" [(ngModel)]=lista[i][1]>
+
+<td>  <div [ngClass]="{'nocompletado': lista[i][1] === false, 'completado': lista[i][1] === true } " id={{i}}>
+{{item[0]}}
+</div></td>
+
+<td><span class="glyphicon glyphicon-asterisk"><button (click)="borrar(i)" class="btn btn-outline-danger"><i class="fas fa-trash-alt"></i></button></span></td> 
+
+</ul></td>
+
+</table>
+
+
+</div>

@@ -1,0 +1,20 @@
+div {
+    text-align: center;
+}
+
+ul{
+    display: inline;
+}
+
+.completado{
+    text-decoration:line-through;
+    color: red;
+}
+
+.nocompletado{
+    color: cadetblue;
+}
+
+.epico{
+   text-align: justify;
+}
